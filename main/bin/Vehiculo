@@ -1,0 +1,51 @@
+/*
+abstract class Vehiculo {
+  - marca: String
+  - modelo: String
+  - año: int
+  - velocidadActual: double
+  + Vehiculo(marca, modelo, año)
+  + acelerar(): void
+  + acelerar(velocidadObjetivo: int): void
+  + calcularConsumo(km: double): double
+  + mostrarInfo(): void
+  + frenar(): void
+} */
+public class Vehiculo {
+    private string marca;
+    private string modelo;
+    private int año;
+    private double velocidadactual
+
+    public Vehiculo(string marca, string modelo, int año) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.año = año;
+        this.velocidadactual = 0.0;
+
+    }
+    public void acelerar() {
+        this.velocidadactual += 10.0;
+    }
+
+    public void acelerar(double velocidadObjetivo) {
+        if (velocidadObjetivo > this.velocidadactual) {
+            this.velocidadactual = velocidadObjetivo;
+        } else {
+            System.out.println("La velocidad objetivo debe ser mayor que la velocidad actual.");
+        }
+    }
+    public double calcularConsumo(double km) {
+        
+        return (km / 100.0) * 8.0;
+    }
+    mostrarInfo() {
+        System.out.println("Marca: " + this.marca);
+        System.out.println("Modelo: " + this.modelo);
+        System.out.println("Año: " + this.año);
+        System.out.println("Velocidad actual: " + this.velocidadactual + " km/h");
+    }
+    public void frenar() {
+        this.velocidadactual = 0.0;
+    }
+}
